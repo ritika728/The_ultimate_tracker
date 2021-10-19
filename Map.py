@@ -2,9 +2,18 @@ from flask import Flask
 from flask_googlemaps import GoogleMaps
 import folium
 import pandas as pd
+import urllib
+import urllib.request
+import json                 
+from pprint import pprint
 app = Flask(__name__)
 
 from flask import render_template
+url = "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events"
+response = urllib.request.urlopen(url)
+text = response.read()
+json_data = json.loads(text)
+df = pd.json_normalize(json_data['events'])
 
 @app.route("/")
 def home():
@@ -39,17 +48,13 @@ def map_marker():
         tiles='Stamen Terrain',
         zoom_start=12
     )
-    data = pd.DataFrame({
-    'lon':[-121.667893746,-120.07159514],
-    'lat':[39.092390021,36.082566967],
-    'name':['Yuba City','Tulare']
-    }, dtype=str)
 
-
-    for i in range(0,len(data)):
-        folium.Marker(
-               location=[data.iloc[i]['lat'], data.iloc[i]['lon']],
-               popup=data.iloc[i]['name'],
+    for i in range(0,len(df)):
+        cf=pd.json_normalize(df.geometries[i])
+        pf=pd.json_normalize(df.categories[i])
+        if pf.id[0]==8:
+            folium.Marker(
+               location=cf.coordinates[0]
             ).add_to(map)
 
     return map._repr_html_()
