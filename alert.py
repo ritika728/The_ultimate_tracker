@@ -16,11 +16,11 @@ def funcalert():
         for j in range(0,len(df)):
             if(i==(df.title[j]+"\n")):
                 print("hello")
-                gmail_user = 'paglol1999@gmail.com'
-                gmail_password = 'paglol14'
+                gmail_user = ''
+                gmail_password = ''
 
                 sent_from = gmail_user
-                to = ['lambaankita24@gmail.com', 'deepalisingal2002@gmail.com']
+                to = ['']
                 subject = 'Lorem ipsum dolor sit amet'
                 body = 'consectetur adipiscing elit'
 
