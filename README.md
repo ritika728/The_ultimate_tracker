@@ -5,7 +5,7 @@
 
 
 # The Ultimate Tracker 
-### The Ultimate tracker is used to track the natural disasters on a global scale. Users will get a map plotted with markers which specify the position of the disaster. Users are free to choose which natural disasters they wanna see.
+### The Ultimate tracker is used to track the natural disasters on a global scale. Users will get a map plotted with markers which specify the position of the disaster. Users are free to choose which natural disasters they wanna see. Also the users will be asked whether they want to get notified for the disasters and if yes they will be notified through email
 
 
 ## Prerequisites:
@@ -22,12 +22,14 @@
   * Jason
   * GoogleMaps
   * MYQR
+  * smtplib
 
 
 ## Objective
 * Through this Tracker we can track the natural disaster such as wildfire, storms, volcanoes etc., that too on a global scale.
 * This tracker will provide the location and details on moving the cursor to a specific position.
 * This tracker provides the genuine tracking of the natural disasters as NASA api is used here. 
+* Users will get notified so that they can prepare themselves for the upcoming disasters and thereby minimizing the losses.
 
 
 
