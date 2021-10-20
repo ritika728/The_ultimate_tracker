@@ -57,9 +57,68 @@ def map_marker():
         cf=pd.json_normalize(df.geometries[i])
         pf=pd.json_normalize(df.categories[i])
         if pf.id[0]==8:
-            folium.Marker(
-               location=cf.coordinates[0]
-            ).add_to(map)
+            for j in range(0,len(df.geometries[i])):
+                folium.Marker(
+                     location=cf.coordinates[j]
+                ).add_to(map)
+
+    return map._repr_html_()
+
+@app.route("/volcanoes")
+def volcanoes_marker():
+    map = folium.Map(
+        location=[45.52336, -122.6750],
+        tiles='Stamen Terrain',
+        zoom_start=12
+    )
+
+    for i in range(0,len(df)):
+        cf=pd.json_normalize(df.geometries[i])
+        pf=pd.json_normalize(df.categories[i])
+        if pf.id[0]==12:
+            for j in range(0,len(df.geometries[i])):
+                folium.Marker(
+                     location=cf.coordinates[j]
+                ).add_to(map)
+
+    return map._repr_html_()
+
+
+@app.route("/severe-storms")
+def storm_marker():
+    map = folium.Map(
+        location=[45.52336, -122.6750],
+        tiles='Stamen Terrain',
+        zoom_start=12
+    )
+
+    for i in range(0,len(df)):
+        cf=pd.json_normalize(df.geometries[i])
+        pf=pd.json_normalize(df.categories[i])
+        if pf.id[0]==10:
+            for j in range(0,len(df.geometries[i])):
+                folium.Marker(
+                     location=cf.coordinates[j]
+                ).add_to(map)
+
+    return map._repr_html_()
+
+@app.route("/icebergs")
+def iceberg_marker():
+    map = folium.Map(
+        location=[45.52336, -122.6750],
+        tiles='Stamen Terrain',
+        zoom_start=12
+    )
+
+    for i in range(0,len(df)):
+        cf=pd.json_normalize(df.geometries[i])
+        pf=pd.json_normalize(df.categories[i])
+        if pf.id[0]==15:
+            for j in range(0,len(df.geometries[i])):
+                folium.Marker(
+                     location=cf.coordinates[j]
+                ).add_to(map)
 
     return map._repr_html_()
 
