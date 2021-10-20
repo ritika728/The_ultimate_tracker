@@ -1,3 +1,4 @@
+from branca.element import Html
 from flask import Flask
 from flask_googlemaps import GoogleMaps
 import folium
@@ -59,7 +60,12 @@ def map_marker():
         if pf.id[0]==8:
             for j in range(0,len(df.geometries[i])):
                 folium.Marker(
-                     location=cf.coordinates[j]
+                    icon = folium.Icon(color='red'),
+                    popup = (
+            "Coordinates: {coord}<br>"
+            "Name: {name}<br>"
+                ).format(coord=cf.coordinates[j],name=df.title[i]),
+                    location=cf.coordinates[j]
                 ).add_to(map)
 
     return map._repr_html_()
@@ -78,6 +84,11 @@ def volcanoes_marker():
         if pf.id[0]==12:
             for j in range(0,len(df.geometries[i])):
                 folium.Marker(
+                    icon = folium.Icon(color='darkred'),
+                    popup = (
+            "Coordinates: {coord}<br>"
+            "Name: {name}<br>"
+                ).format(coord=cf.coordinates[j],name=df.title[i]),
                      location=cf.coordinates[j]
                 ).add_to(map)
 
@@ -98,6 +109,11 @@ def storm_marker():
         if pf.id[0]==10:
             for j in range(0,len(df.geometries[i])):
                 folium.Marker(
+                    icon = folium.Icon(color='gray'),
+                    popup = (
+            "Coordinates: {coord}<br>"
+            "Name: {name}<br>"
+                ).format(coord=cf.coordinates[j],name=df.title[i]),
                      location=cf.coordinates[j]
                 ).add_to(map)
 
@@ -117,6 +133,11 @@ def iceberg_marker():
         if pf.id[0]==15:
             for j in range(0,len(df.geometries[i])):
                 folium.Marker(
+                    icon = folium.Icon(color='blue'),
+                    popup = (
+            "Coordinates: {coord}<br>"
+            "Name: {name}<br>"
+                ).format(coord=cf.coordinates[j],name=df.title[i]),
                      location=cf.coordinates[j]
                 ).add_to(map)
 
