@@ -5,20 +5,29 @@
 
 
 # The Ultimate Tracker 
-### The Ultimate tracker is used to track the natural disaster on a global scale. This tracker has been created by using the Google Map API and with reference to NASA API.
+### The Ultimate tracker is used to track the natural disasters on a global scale. Users will get a map plotted with markers which specify the position of the disaster. Users are free to choose which natural disasters they wanna see.
 
 
 ## Prerequisites:
 * Google API cloud platform
-* Python - Flask module
-* Html
+* NASA API Key
+* Google map API key
+* HTML 
 * CSS
+* Python modules
+  * Flask
+  * Urllib
+  * Pandas
+  * Folium
+  * Jason
+  * GoogleMaps
+  * MYQR
 
 
 ## Objective
 * Through this Tracker we can track the natural disaster such as wildfire, storms, volcanoes etc., that too on a global scale.
 * This tracker will provide the location and details on moving the cursor to a specific position.
-* This tracker provides the genuine tracking of the natural disasters as stated by NASA. 
+* This tracker provides the genuine tracking of the natural disasters as NASA api is used here. 
 
 
 
