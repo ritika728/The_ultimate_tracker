@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The tracker components</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        font-size:large;
+    }
+    table{
+  border: 1px solid black;
+  border-collapse: collapse;
+  height:700px;
+  width:1500px;
+  margin-left:8px;
+  margin-top: 25px;
+  text-align:center;
+  
+}
+td {
+  background-color: grey;
+  color:black;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.col, #col1, #col2, #col3{
+    background-color: rgb(58, 57, 57);
+    color:black;
+    font-size:xx-large;
+}
+a{
+    color:black;
+}
+img{
+    height:100px;
+    width:100px;
+}
+</style>
+<body>
+    <table class="table">
+        <tr class="col">
+            <td id="col1"><b>Component</b></td>
+            <td id="col2"><b>Link</b></td>
+            <td id="col3"><b>QR Code</b></td>
+        </tr>
+        <tr>
+            <td>WILD FIRE</td>
+            <td><a href="http://127.0.0.1:5000/wild-fire">here</a></td>
+            <td><img src="/static/wildfirecode.png"></td>
+        </tr>
+        <tr>
+            <td>SEVERE STORMS</td>
+            <td><a href="http://127.0.0.1:5000/severe-storms">here</a></td>
+            <td><img src="/static/stormscode.png"></td>
+        </tr>
+        <tr>
+            <td>VOLCANOES</td>
+            <td><a href="http://127.0.0.1:5000/severe-storms">here</a></td>
+            <td><img src="/static/volcanoescode.png"></td>
+        </tr>
+        <tr>
+            <td>ICEBERGS</td>
+            <td><a href="http://127.0.0.1:5000/icebergs">here</a></td>
+            <td><img src="/static/icebergcode.png"></td>
+        </tr>
+    </table>
+</body>
+</html>
