@@ -19,6 +19,10 @@ df = pd.json_normalize(json_data['events'])
 def home():
     return render_template("index.html")
 
+@app.route("/list")
+def func():
+    return render_template("content.html")
+
 @app.route("/map")
 def index():
     map = folium.Map(
