@@ -7,6 +7,9 @@ import urllib
 import urllib.request
 import json                 
 from pprint import pprint
+import mysql.connector 
+import alert
+from flask import request
 app = Flask(__name__)
 
 from flask import render_template
@@ -20,6 +23,24 @@ df = pd.json_normalize(json_data['events'])
 def home():
     return render_template("index.html")
 
+@app.route("/sign-in")
+def my_form_post():
+    return render_template("sign_in.html")
+
+@app.route('/sign-in', methods=['POST'])
+def my_form_post_func():
+    em = request.form['email']
+    #passw = request.form['password']
+    ins = request.form['institution']
+    file1=open("city.txt","a")
+    file = open("email.txt", "a")
+    file.write(em+"\n")
+    file1.write(ins+"\n")
+    file.close
+    file1.close
+    alert.funcalert()
+    return render_template("index.html")
+
 @app.route("/list")
 def func():
     return render_template("content.html")
@@ -30,6 +51,7 @@ def index():
         location=[45.52336, -122.6750]
     )
     return map._repr_html_()
+
 @app.route("/open-street-map")
 def open_street_map():
     map = folium.Map(
