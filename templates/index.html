@@ -7,27 +7,78 @@
     <title>THE ULTIMATE TRACKER</title>
     <style>
         body  {
-    background-image: url("/static/bgimg.jpg");
+    background-color: black;
     font-family: cursive; 
     overflow: hidden;
     margin: 0;
+    color:white;
        }
-       h1{
-           color:white;
-           background-color: rgb(0, 110, 255);
+       #header{
+           background-image: url("/static/logo2.png");
+           background-repeat: no-repeat;
            text-align:center;
+           font-size: 30px;
+           background-position-x: center;
+           background-size: 50px;
        }
-       img{
+       #trackercode{
+           display:inline;
+           margin-left:20px;
+           height:250px;
+           width: 250px;
+           float:left;
+       }
+       .firstpage{
            display:block;
-           margin-left: auto;
-           margin-right: auto;
-           margin-top:300px;
-           width: 50%;
+           float:right;
+       }
+       .float{
+           display:inline-block;
+       }
+       #contentoftracker{
+           font-size:xx-large;
+       }
+       a{
+           color:white;
+       }
+       #listimg{
+           margin-right:20px;
+       }
+       #contentoflist{
+           font-size: xx-large;
+       }
+       .footer{
+           text-align:center;
+           margin-top:90px;
        }
     </style>
 </head>
 <body>
-    <h1>THE ULTIMATE TRACKER</h1>
-    <img src="/static/spinner.gif">
+    <h1 id="header">BIT BY BIT</h1>
+<div class="person1" style="float:left; display:block; ">
+    <span style="float:left;width: 20%;">
+        <img src="/static/trackercode.png"  
+         width="250px" height"250px" />
+    </span>
+    <span style="float:right;width: 80%;">
+        <p id="contentoftracker" style="float:right; display:block;">Here we present you <b>the ultimate tracker</b>. Wandering what it is? No worries here is a brief description of it. We have tracked various natural disasters and plotted these on google maps.
+        <p style="font-size: x-small;">You are already on this page. Link for this page is <a href="http://127.0.0.1:5000/">here</a></p></p>
+    </span>
+</div>
+<br>
+<br>
+<div class="person1" style="float:right; display:block; ">
+    <span style="float:right;width: 20%;">
+        <img src="/static/listcode.png"  
+         width="250px" height"250px" id="listimg" />
+    </span>
+    <span style="float:left;width: 80%;">
+        <p id="contentoflist" style="float:left; display:block;">Scan this code to head over to the page of contents or click this <a href="http://127.0.0.1:5000/list/">link</a>.There you will see a list of natural disaters which we have plotted alogwith the qrcode and the link for respective pages.
+        </p>
+    </span>
+</div>
+<br>
+<br>
+<p class="footer">Link to github repository <a href="https://github.com/deepali2002-max/The_ultimate_tracker">THE ULTIMATE TRACKER</a></p>
 </body>
 </html>
