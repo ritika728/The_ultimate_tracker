@@ -56,4 +56,4 @@
 ## Contributors 
 * [Ankita Lamba](https://github.com/ankitalamba)
 * [Deepali Singal](https://github.com/deepali2002-max)
-* [Ritika Malik](https://github.com/ritika168)
+* [Ritika Malik](https://github.com/ritika728)
