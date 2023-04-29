@@ -5,7 +5,7 @@
 
 
 # The Ultimate Tracker 
-### The Ultimate tracker is used to track the natural disasters on a global scale. Users will get a map plotted with markers which specify the position of the disaster. Users are free to choose which natural disasters they wanna see. Also the users will be asked whether they want to get notified for the disasters and if yes they will be notified through email
+### The Ultimate tracker is used to track the natural disasters on a global scale. Users will get a map plotted with markers which specify the position of the disaster. Users will have the option to choose the natural disasters they want to get the information for. Also the users will be asked whether they want to get notified for the disasters and they will be notified via email
 
 
 ## Prerequisites:
@@ -54,6 +54,6 @@
 ---
 
 ## Contributors 
+* [Ritika Malik](https://github.com/ritika728)
 * [Ankita Lamba](https://github.com/ankitalamba)
 * [Deepali Singal](https://github.com/deepali2002-max)
-* [Ritika Malik](https://github.com/ritika728)
